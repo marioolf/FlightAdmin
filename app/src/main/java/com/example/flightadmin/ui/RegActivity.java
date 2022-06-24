@@ -15,10 +15,12 @@ import com.example.flightadmin.*;
 import com.example.flightadmin.R;
 
 public class RegActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reg);
+
 
         EditText edLogin = (EditText) this.findViewById(R.id.edLogin);
         EditText edPasswd = (EditText) this.findViewById(R.id.edPasswd);
@@ -53,12 +55,10 @@ public class RegActivity extends AppCompatActivity {
         edLogin.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
             }
 
             @Override
@@ -73,14 +73,13 @@ public class RegActivity extends AppCompatActivity {
         });
 
         edPasswd.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
 
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
 
             @Override

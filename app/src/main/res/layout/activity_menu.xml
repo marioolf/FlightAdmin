@@ -47,5 +47,4 @@
             android:text="@string/add"
             tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
     </LinearLayout>
-
 </LinearLayout>

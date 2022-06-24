@@ -14,7 +14,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.Spinner;
@@ -28,6 +27,7 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.flightadmin.R;
+import com.example.flightadmin.core.AddFlightActivity;
 import com.example.flightadmin.core.DatabaseMng;
 
 public class MenuActivity
@@ -39,10 +39,12 @@ public class MenuActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_menu);
         ListView lvFlights = this.findViewById(R.id.lvFlights);
         Button btnAdd = this.findViewById(R.id.btnAdd);
         Spinner spnAirline = this.findViewById(R.id.spnAirline);
+
         View header = getLayoutInflater().inflate(R.layout.header, null);
 
         final Intent sendData = this.getIntent();
@@ -67,6 +69,7 @@ public class MenuActivity
                     public void onActivityResult(ActivityResult result) {
                         if(result.getResultCode() == Activity.RESULT_OK){
                             Intent data = result.getData();
+
                             String destination = data.getExtras().getString("destination", "ERROR");
                             String airline = data.getExtras().getString("airline", "ERROR");
                             String date = data.getExtras().getString("date", "ERROR");
@@ -101,6 +104,7 @@ public class MenuActivity
                     final String date = cursor.getString(2);
                     final String time = cursor.getString(3);
                     final String origin = cursor.getString(4);
+
                     Intent addFlightActivity = new Intent(MenuActivity.this, MoreInfoActivity.class);
 
                     addFlightActivity.putExtra("destination", destination);
@@ -134,7 +138,6 @@ public class MenuActivity
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
             }
         });
         this.registerForContextMenu(lvFlights);
@@ -160,21 +163,21 @@ public class MenuActivity
         lvFlights.setAdapter( this.adapterDB );
         this.adapterDB.changeCursor(this.gestorDB.getFlights(MenuActivity.this.login));
     }
+
     @Override
     public void onPause()
     {
         super.onPause();
-
         this.gestorDB.close();
         this.adapterDB.getCursor().close();
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         super.onCreateOptionsMenu(menu);
-
         this.getMenuInflater().inflate(R.menu.actmenu, menu);
         return true;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem menuItem){
         boolean toret = false;
@@ -267,8 +270,6 @@ public class MenuActivity
         }
         return toret;
     }
-
-
 
     private DatabaseMng gestorDB;
     private SimpleCursorAdapter adapterDB;

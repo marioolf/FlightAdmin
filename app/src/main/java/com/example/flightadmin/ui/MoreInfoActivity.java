@@ -31,6 +31,7 @@ public class MoreInfoActivity extends AppCompatActivity {
 
         final Intent sendData = this.getIntent();
         if (sendData.getExtras() != null) {
+
             final String destination = sendData.getExtras().getString("destination", "");
             final String airline = sendData.getExtras().getString("airline", "");
             final String date = sendData.getExtras().getString("date", "");
@@ -50,7 +51,6 @@ public class MoreInfoActivity extends AppCompatActivity {
                     MoreInfoActivity.this.finish();
                 }
             });
-
         }
     }
 }

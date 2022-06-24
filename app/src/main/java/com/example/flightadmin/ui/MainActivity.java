@@ -32,8 +32,10 @@ public class MainActivity extends AppCompatActivity {
 
         EditText edLogin = this.findViewById(R.id.edLogin);
         EditText edPasswd = this.findViewById(R.id.edPasswd);
+
         Button btnAccept = this.findViewById(R.id.btnAccept);
         Button btnRegister = this.findViewById(R.id.btnRegister);
+
         btnAccept.setEnabled(false);
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
@@ -87,12 +89,10 @@ public class MainActivity extends AppCompatActivity {
         edLogin.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
             }
 
             @Override
@@ -105,15 +105,14 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
         edPasswd.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
             }
 
             @Override
@@ -132,8 +131,8 @@ public class MainActivity extends AppCompatActivity {
     public void onPause(){
         super.onPause();
         this.gestorDB.close();
-
     }
+
     private DatabaseMng gestorDB;
-    private SimpleCursorAdapter adapterDB;
+
 }

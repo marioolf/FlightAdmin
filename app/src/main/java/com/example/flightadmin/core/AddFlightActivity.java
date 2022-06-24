@@ -1,4 +1,4 @@
-package com.example.flightadmin.ui;
+package com.example.flightadmin.core;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -22,11 +22,15 @@ public class AddFlightActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_addflight);
 
+
         EditText edDestination = (EditText) this.findViewById(R.id.edDestination);
         Spinner spnAirline = (Spinner) this.findViewById(R.id.spnAirline);
         EditText edDate = (EditText) this.findViewById(R.id.edDate);
         EditText edTime = (EditText) this.findViewById(R.id.edTime);
         EditText edOrigin = (EditText) this.findViewById(R.id.edOrigin);
+
+        String spnvalue = spnAirline.getSelectedItem().toString();
+
         Button btnCancel = (Button) this.findViewById(R.id.btnCancel);
         Button btnAdd = (Button) this.findViewById(R.id.btnAdd);
 
@@ -51,7 +55,7 @@ public class AddFlightActivity extends AppCompatActivity {
             edTime.setText(time);
             edOrigin.setText(origin);
 
-
+            spnvalue = spnAirline.getSelectedItem().toString();
         }
 
         btnAdd.setEnabled(false);
@@ -87,12 +91,12 @@ public class AddFlightActivity extends AppCompatActivity {
 
         edDestination.addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
 
             }
 
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
             }
 
@@ -106,27 +110,31 @@ public class AddFlightActivity extends AppCompatActivity {
             }
         });
 
+        String finalSpnvalue = spnvalue;
         spnAirline.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
+                if(finalSpnvalue == spnAirline.getSelectedItem().toString()){
+                    btnAdd.setEnabled(true);
+                }else{
+                    btnAdd.setEnabled(false);
+                }
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
             }
+
         });
 
         edDate.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
             }
 
             @Override
@@ -142,12 +150,10 @@ public class AddFlightActivity extends AppCompatActivity {
         edTime.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
             }
 
             @Override
@@ -163,12 +169,10 @@ public class AddFlightActivity extends AppCompatActivity {
         edOrigin.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
             }
 
             @Override
@@ -180,7 +184,6 @@ public class AddFlightActivity extends AppCompatActivity {
                 }
             }
         });
-
 
     }
 }

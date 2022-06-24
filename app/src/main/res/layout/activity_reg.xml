@@ -18,7 +18,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.188"
         android:textSize="20sp"/>
-
     <TextView
         android:id="@+id/tvLogin"
         android:layout_width="wrap_content"

@@ -17,7 +17,9 @@ public class InfoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
+
         Button btnBack = this.findViewById(R.id.btnBack);
+
         Button btnLogout = this.findViewById(R.id.btnLogout);
 
         btnBack.setOnClickListener(new View.OnClickListener() {

@@ -93,6 +93,7 @@ public class DatabaseMng extends SQLiteOpenHelper {
         Cursor cursor = null;
         boolean toret = false;
 
+
         values.put(FLIGHT_COL_DESTINATION, destination);
         values.put(FLIGHT_COL_AIRLINE, airline);
         values.put(FLIGHT_COL_DATE, date);
@@ -163,7 +164,6 @@ public class DatabaseMng extends SQLiteOpenHelper {
                     new String[]{login},
                     null, null, null, null);
             if(cursor.getCount() == 0){
-                //En caso de que el usuario no exista
                 db.insert(TABLE_USER, null, values);
                 db.setTransactionSuccessful();
                 toret = true;
@@ -207,7 +207,6 @@ public class DatabaseMng extends SQLiteOpenHelper {
             }
             db.endTransaction();
         }
-
         return toret;
     }
 }
