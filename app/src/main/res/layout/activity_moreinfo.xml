@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="top"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    >
+
+                        <TextView
+                            android:id="@+id/wDestination"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Your destination:"
+                            tools:ignore="MissingConstraints"
+                            tools:layout_editor_absoluteX="161dp"
+                            tools:layout_editor_absoluteY="231dp"
+                            android:textSize="20sp"/>
+
+                        <TextView
+                            android:id="@+id/wAirline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Airline:"
+                            tools:ignore="MissingConstraints"
+                            tools:layout_editor_absoluteX="175dp"
+                            tools:layout_editor_absoluteY="273dp"
+                            android:textSize="20sp"/>
+
+                        <TextView
+                            android:id="@+id/wDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Date of flight"
+                            tools:ignore="MissingConstraints"
+                            tools:layout_editor_absoluteX="183dp"
+                            tools:layout_editor_absoluteY="314dp"
+                            android:textSize="20sp"/>
+
+                        <TextView
+                            android:id="@+id/wTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Time of flight"
+                            tools:ignore="MissingConstraints"
+                            tools:layout_editor_absoluteX="175dp"
+                            tools:layout_editor_absoluteY="390dp"
+                            android:textSize="20sp"/>
+
+                        <TextView
+                            android:id="@+id/wOrigin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="You are flying from:"
+                            tools:ignore="MissingConstraints"
+                            tools:layout_editor_absoluteX="175dp"
+                            tools:layout_editor_absoluteY="347dp"
+                            android:textSize="20sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/edDestination"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/destination"
+                            tools:ignore="MissingConstraints"
+                            tools:layout_editor_absoluteX="161dp"
+                            tools:layout_editor_absoluteY="231dp"
+                            android:textSize="20sp"/>
+
+                        <TextView
+                            android:id="@+id/spnAirline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/airline"
+                            tools:ignore="MissingConstraints"
+                            tools:layout_editor_absoluteX="175dp"
+                            tools:layout_editor_absoluteY="273dp"
+                            android:textSize="20sp"/>
+
+                        <TextView
+                            android:id="@+id/edDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/date"
+                            tools:ignore="MissingConstraints"
+                            tools:layout_editor_absoluteX="183dp"
+                            tools:layout_editor_absoluteY="314dp"
+                            android:textSize="20sp"/>
+
+                        <TextView
+                            android:id="@+id/edTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/time"
+                            tools:ignore="MissingConstraints"
+                            tools:layout_editor_absoluteX="175dp"
+                            tools:layout_editor_absoluteY="390dp"
+                            android:textSize="20sp"/>
+
+                        <TextView
+                            android:id="@+id/edOrigin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/origin"
+                            tools:ignore="MissingConstraints"
+                            tools:layout_editor_absoluteX="175dp"
+                            tools:layout_editor_absoluteY="347dp"
+                            android:textSize="20sp"/>
+
+                </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/back"
+            android:layout_gravity="center_horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.925" />
+
+</LinearLayout>

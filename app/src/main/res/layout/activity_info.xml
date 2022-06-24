@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:padding="5dp"
+    tools:context=".ui.MoreInfoActivity">
+
+    <TextView
+        android:id="@+id/tvInfoLong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/createdby"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/tvCodeUrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/codeurl"
+        android:gravity="center"
+        android:layout_margin="40dp"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/back"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+
+        android:id="@+id/btnLogout"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/logut"
+        tools:ignore="MissingConstraints"/>
+
+</LinearLayout>

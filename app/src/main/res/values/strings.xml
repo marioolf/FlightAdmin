@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">FlightAdmin</string>
+
+    <string name="login">User</string>
+    <string name="passwd">Password</string>
+    <string name="logut">Log Out</string>
+
+    <string name="accept">Log in</string>
+    <string name="register">Register</string>
+
+    <string name="data">Please, fill in the following</string>
+
+    <string name="back">Back</string>
+    <string name="cancel">Cancel</string>
+    <string name="add">Add Flight</string>
+    <string name="addflight">Add</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+
+
+    <string name="destination">Destination</string>
+    <string name="airline">Airline</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="origin">Origin</string>
+
+    <string name="about">Info and Exit</string>
+    <string name="createdby">Created by Mario Lopez Feijoo for Dispositivos Moviles subject</string>
+    <string name="codeurl"><a href="https://github.com/marioolf/FlightAdmin">Click to se code on Github</a></string>
+
+
+    <string-array name="airlines">
+        <item>Ryanair</item>
+        <item>Wizz Air</item>
+        <item>Vueling</item>
+        <item>Iberia</item>
+        <item>EasyJet</item>
+        <item>Lufthansa</item>
+    </string-array>
+
+    <string-array name="airlines_all">
+        <item>All</item>
+        <item>Ryanair</item>
+        <item>Wizz Air</item>
+        <item>Vueling</item>
+        <item>Iberia</item>
+        <item>EasyJet</item>
+        <item>Lufthansa</item>
+    </string-array>
+</resources>
