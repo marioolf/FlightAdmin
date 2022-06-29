@@ -29,7 +29,6 @@ public class AddFlightActivity extends AppCompatActivity {
         EditText edTime = (EditText) this.findViewById(R.id.edTime);
         EditText edOrigin = (EditText) this.findViewById(R.id.edOrigin);
 
-        String spnvalue = spnAirline.getSelectedItem().toString();
 
         Button btnCancel = (Button) this.findViewById(R.id.btnCancel);
         Button btnAdd = (Button) this.findViewById(R.id.btnAdd);
@@ -55,10 +54,10 @@ public class AddFlightActivity extends AppCompatActivity {
             edTime.setText(time);
             edOrigin.setText(origin);
 
-            spnvalue = spnAirline.getSelectedItem().toString();
         }
 
         btnAdd.setEnabled(false);
+
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -110,15 +109,10 @@ public class AddFlightActivity extends AppCompatActivity {
             }
         });
 
-        String finalSpnvalue = spnvalue;
         spnAirline.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(finalSpnvalue == spnAirline.getSelectedItem().toString()){
-                    btnAdd.setEnabled(true);
-                }else{
-                    btnAdd.setEnabled(false);
-                }
+
             }
 
             @Override
